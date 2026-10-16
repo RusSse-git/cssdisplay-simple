@@ -29,3 +29,208 @@ h2{
     padding: 20px;
     text-align: center;
 }
+
+.tag-white{
+    color: black;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+.tag-black{
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.demo-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+.box{
+    width: 120px;
+    height: 120px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.box.white{
+    background-color: white;
+    color: black;
+}
+
+.ib{
+    display: inline-block;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+.hidden{
+    display: none;
+}
+
+.underline{ text-decoration: underline; }
+.line-through{ text-decoration: line-through; }
+.overline{ text-decoration: overline; }
+.uppercase{ text-transform: uppercase; }
+.spaced{ letter-spacing: 10px; }
+.shadow{ text-shadow: 3px 3px 0 white, 6px 6px 0 black; }
+.italic{ font-style: italic; }
+.bold{ font-weight: bold; }
+
+.b-solid{ border: 6px solid black; }
+.b-dashed{ border: 6px dashed black; }
+.b-dotted{ border: 6px dotted black; }
+.b-double{ border: 8px double black; }
+.b-groove{ border: 8px groove black; }
+
+.square{ border-radius: 0; }
+.rounded{ border-radius: 20px; }
+.circle{ border-radius: 50%; }
+.leaf{ border-radius: 0 60px 0 60px; }
+
+.shadow-soft{ box-shadow: 0 10px 25px rgba(0,0,0,0.35); }
+.shadow-hard{ box-shadow: 10px 10px 0 black; }
+.shadow-glow{ box-shadow: 0 0 25px 8px rgba(255,255,255,0.9), 0 0 0 4px black; }
+.shadow-inset{ box-shadow: inset 0 0 20px 5px rgba(0,0,0,0.6); }
+
+.grad-linear{ background: linear-gradient(135deg, black, white); color: gray; }
+.grad-radial{ background: radial-gradient(circle, white, black); color: gray; }
+.grad-conic{ background: conic-gradient(black, white, black); color: gray; }
+
+.hover-scale,
+.hover-rotate,
+.hover-invert,
+.hover-lift{
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.hover-scale:hover{ transform: scale(1.3); }
+.hover-rotate:hover{ transform: rotate(360deg); }
+.hover-invert:hover{
+    background-color: white;
+    color: black;
+    border: 5px solid black;
+}
+.hover-lift:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+}
+
+.anim-bounce{ animation: bounce 1s ease-in-out infinite; }
+@keyframes bounce{
+    0%, 100%{ transform: translateY(0); }
+    50%{ transform: translateY(-40px); }
+}
+
+.anim-spin{ animation: spin 2s linear infinite; }
+@keyframes spin{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+}
+
+.anim-pulse{ animation: pulse 1.2s ease-in-out infinite; }
+@keyframes pulse{
+    0%, 100%{ transform: scale(1); }
+    50%{ transform: scale(1.25); }
+}
+
+.anim-shake{ animation: shake 0.5s linear infinite; }
+@keyframes shake{
+    0%, 100%{ transform: translateX(0); }
+    25%{ transform: translateX(-12px); }
+    75%{ transform: translateX(12px); }
+}
+
+.anim-fade{ animation: fade 2s ease-in-out infinite; }
+@keyframes fade{
+    0%, 100%{ opacity: 1; }
+    50%{ opacity: 0; }
+}
+
+.slide-track{
+    width: 100%;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.anim-slide{ animation: slide 3s ease-in-out infinite alternate; }
+@keyframes slide{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(min(500px, 60vw)); }
+}
+
+.anim-flip{ animation: flip 2s ease-in-out infinite; }
+@keyframes flip{
+    0%{ transform: perspective(400px) rotateY(0deg); }
+    50%{ transform: perspective(400px) rotateY(180deg); }
+    100%{ transform: perspective(400px) rotateY(360deg); }
+}
+
+.anim-color{ animation: color 3s linear infinite; }
+@keyframes color{
+    0%, 100%{ background-color: black; color: white; }
+    50%{ background-color: white; color: black; box-shadow: 0 0 0 5px black; }
+}
+
+.typing{
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid black;
+    width: 0;
+    animation:
+        typing 4s steps(26) infinite alternate,
+        cursor 0.7s step-end infinite;
+}
+@keyframes typing{
+    from{ width: 0; }
+    to{ width: 26ch; }
+}
+@keyframes cursor{
+    50%{ border-color: transparent; }
+}
+
+.dot{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    animation: dots 1s ease-in-out infinite;
+}
+.d2{ animation-delay: 0.2s; }
+.d3{ animation-delay: 0.4s; }
+@keyframes dots{
+    0%, 100%{ transform: translateY(0); background-color: white; }
+    50%{ transform: translateY(-25px); background-color: black; }
+}
+
+.orbit{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 40px;
+    border: 4px dashed black;
+    border-radius: 50%;
+    animation: spin 4s linear infinite;
+}
+.planet{
+    position: absolute;
+    top: -17px;
+    left: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border: 4px solid white;
+    border-radius: 50%;
+}
